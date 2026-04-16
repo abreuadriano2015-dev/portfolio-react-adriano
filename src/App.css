@@ -1,38 +1,97 @@
-.App {
+/* Isso vai controlar o tamanho da foto e deixá-la redonda */
+.profile-pic {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #007bff; /* Uma borda azul para destacar */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Centraliza o texto do nome e profissão */
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Garante que o fundo do site fique escuro e o texto claro */
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* src/App.css */
+
+/* Reset básico e fontes profissionais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a1a; /* Cinza bem escuro */
+  color: #f0f0f0;          /* Branco off-white para não cansar a vista */
+  line-height: 1.6;
+}
+
+/* Container principal para centralizar tudo e dar espaço nas laterais */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+/* Centraliza a seção de projetos */
+.projetos-secao {
+  margin-top: 40px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.projetos-secao h2 {
+  margin-bottom: 30px;
+  color: #007bff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Cria uma grade (grid) para os projetos */
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilo do Card */
+.projeto-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  text-align: left;
+  transition: 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.projeto-card:hover {
+  border-color: #007bff;
+  transform: translateY(-5px);
+}
+
+.projeto-card h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.projeto-card p {
+  color: #ccc;
+  font-size: 0.9rem;
 }

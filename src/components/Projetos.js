@@ -1,9 +1,8 @@
 function Projetos() {
-
   const projetos = [
     {
       nome: "Manutenção de Impressora",
-      descricao: "Manutenção e limpeza de impressoras Epson e HP"
+      descricao: "Manutenção e limpeza de impressoras"
     },
     {
       nome: "Redes",
@@ -16,17 +15,18 @@ function Projetos() {
   ];
 
   return (
-    <div>
+    <section className="projetos-secao">
       <h2>Meus Projetos</h2>
 
-      {projetos.map((projeto, index) => (
-        <div key={index}>
-          <h3>{projeto.nome}</h3>
-          <p>{projeto.descricao}</p>
-        </div>
-      ))}
-
-    </div>
+      <div className="projetos-container">
+        {projetos.map((projeto, index) => (
+          <div key={index} className="projeto-card">
+            <h3>{projeto.nome}</h3>
+            <p>{projeto.descricao}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
